@@ -10,13 +10,18 @@ function sumarProdutos(precioUnitario, cantidadDeseada){
     return total;
 }
 
+//Función para mostrar la lista de productos
+function mostrarProductos(listaDeProductos,listaDePrecios){
+    console.log("Lista de productos:");
+    for(let i = 0; i < listaDeProductos.length; i++){
+        console.log(i + ": " + listaDeProductos[i] + " - $" + listaDePrecios[i]);
+    }
+}
+
 //Función para simular la venta de productos
 function ventaProductos(listaProductos, precios){
     //Se imprime la lista de productos usando un bucle for
-    console.log("Lista de productos:");
-    for(let i = 0; i < listaProductos.length; i++){
-        console.log(i + ": " + listaProductos[i] + " - $" + precioProductos[i]);
-    }
+    mostrarProductos(listaProductos, precios);
 
     //Se le consulta al usuario que producto desea comprar, se detecta si es válido, y se guarda el mismo
     let numeroProducto = prompt("Ingrese el número del producto que desea comprar:");
@@ -52,13 +57,10 @@ function ventaProductos(listaProductos, precios){
     precios.pop(numeroProducto);
 
     //Se vuelve a mostrar la lista de productos ya sin el último producto
-    console.log("Lista de productos:");
-    for(let i = 1; i < listaProductos.length; i++){
-        console.log(i + ": " + listaProductos[i] + " - $" + precioProductos[i]);
-    }
+    mostrarProductos(listaProductos, precios);
 
-    //Se consulta al usuario si quiere seguir comprando
-    let seguirComprando = prompt("Desea seguir comprando? 1-Si, 2-No");
+    //Se consulta al usuario si quiere realizar otra compra compra
+    let seguirComprando = prompt("Desea realizar otra compra? 1-Si, 2-No");
     if(seguirComprando == 1){
         ventaProductos(listaProductos, precios);
     }

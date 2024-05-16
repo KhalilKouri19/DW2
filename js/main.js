@@ -1,6 +1,7 @@
-// PRIMER, SEGUNDO, TERCER Y CUARTO DESAFÍO:
+// SEGUNDO, TERCER, CUARTO Y QUINTO DESAFÍO:
 
 //Se define el array con los productos y otro con sus precios
+
 const productos = ["Teclados", "Mouses", "Monitores", "Gabinetes", "Parlantes", "Impresoras", "Placas", "Memorias RAM", "Gráficas", "Procesadores", "Coolers"];
 const precioProductos = [7460, 4970, 103900, 68650, 20900, 168400, 77800, 279900, 104180, 154500, 3000];
 
@@ -51,6 +52,7 @@ function ventaProductos(listaProductos, precios){
     //Se logea el descuento aplicado y el total con el descuento
     console.log(`Descuento: -$${descuento}`);
     console.log(`Costo total con descuento de su compra: $${costoTotal}`);
+    console.log("---------------------------------------------")
 
     //Se elimina de ambos arrays el último producto
     listaProductos.pop(numeroProducto);
@@ -58,12 +60,43 @@ function ventaProductos(listaProductos, precios){
 
     //Se vuelve a mostrar la lista de productos ya sin el último producto
     mostrarProductos(listaProductos, precios);
-
-    //Se consulta al usuario si quiere realizar otra compra compra
-    let seguirComprando = prompt("Desea realizar otra compra? 1-Si, 2-No");
-    if(seguirComprando == 1){
-        ventaProductos(listaProductos, precios);
-    }
 }
 
 ventaProductos(productos, precioProductos);
+
+
+
+//SEXTO DESAFIO
+
+
+
+console.log("---------------------------------------------")
+
+const producto = {nombre: "Camiseta", precio: 1500, cantidadDisponible: 15};
+
+console.log("Producto: " + producto.nombre);
+console.log("Precio: " + producto.precio);
+console.log("Stock: " + producto.cantidadDisponible);
+console.log("---------------------------------------------")
+
+producto.nombre = "Zapatillas";
+
+console.log("Producto: " + producto.nombre);
+console.log("Precio: " + producto.precio);
+console.log("Stock: " + producto.cantidadDisponible);
+console.log("---------------------------------------------")
+
+producto.categoria = "Calzado";
+
+console.log("Producto: " +  producto.nombre);
+console.log("Precio: " + producto.precio);
+console.log("Stock: " + producto.cantidadDisponible);
+console.log("Categoria: " + producto.categoria);
+console.log("---------------------------------------------")
+
+delete producto.cantidadDisponible;
+
+console.log("Producto: " + producto.nombre);
+console.log("Precio: " + producto.precio);
+console.log("Categoria: " + producto.categoria);
+console.log("---------------------------------------------")

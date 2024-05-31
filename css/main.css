@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(225, 225, 225);
+}
+
+#container_products{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.container_item{
+    width: 500px;
+    height: 350px;
+    border-radius: 3px;
+    border: solid rgb(150, 150, 150) 1px;
+    background-color:whitesmoke;
+    transition: 0.2s ease-in-out;
+}
+
+.img_product{
+    width: 500px;
+    height: 200px;
+    object-fit: contain;
+}
+
+.precio_producto{
+    padding-left: 15px;
+    font-family: "Roboto", sans-serif;
+    font-size: large;
+}
+
+.nombre_producto{
+    padding-left: 15px;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+}
+
+.contenedor_precio{
+    border-top: solid rgb(150, 150, 150) 1px;
+}
+
+.container_item:hover{
+    transform: scale(1.02);
+}
